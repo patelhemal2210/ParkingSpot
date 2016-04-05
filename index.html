@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Class Work</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&callback=initAutocomplete"
+            async defer></script>
+    <script src="js/map.js"></script>
+</head>
+<body class="bg-primary">
+    <div class="content-heading">
+       <!-- <img style="float:left;margin-right:150px;" src="images/logo.png" class="img-responsive" alt="LOGO"><br>-->
+        <img style="float:left;margin-left:150px;" src="images/title3.png" class="img-responsive" alt="LOGO"><br>
+    </div>
+    <nav style="clear:both" class="navbar navbar-inverse">
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Home</a></li>
+                <li><a href="#/calculator">Find Parking Spot</a></li>
+                <li><a href="#/flickr">About US</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="form-horizontal">
+        <div class="control-group row-fluid form-inline">
+            <h4 style="margin-left:25px;"><strong>Find Parking Spot</strong></h4>
+            <div class="controls">
+                <input id="pac-input" class="Searchcontrols" type="text" placeholder="Search Box">
+            </div>
+
+
+        </div>
+
+    </div>
+    <a name="MapAncher"></a>
+    <div class="form-horizontal">
+        <div class="list-div-style-div" ng-controller="homeController">
+            <ul class="list-group list-div-style-title">
+                <li ng-click="display = !display" style="color:Black;" class="list-group-item">
+                    <strong>List of Parking spot</strong>
+                    <span style="float:right;" class="glyphicon glyphicon-menu-down"></span>
+                </li>
+
+            </ul>
+            <a href="#">
+                <span class="glyphicon glyphicon-menu-down"></span>
+            </a>
+
+            <ul ng-show="display" class="list-group list-div-style">
+                <li ng-repeat="parkingLot in parkingLotMain.carparks" class="list-group-item hover-color" ng-click = "generateMarker($event)">
+                   {{parkingLot.address}}
+                </li>
+            </ul>
+        </div>
+
+        <div id="Map"></div>
+    </div>
+
+
+
+</body>
+</html>
