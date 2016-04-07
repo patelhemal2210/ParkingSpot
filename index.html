@@ -44,19 +44,18 @@
     <div class="form-horizontal">
         <div class="list-div-style-div">
             <ul class="list-group list-div-style-title">
-                <li ng-click="display = !display" style="color:Black;" class="list-group-item">
+                <li ng-click="toggleDisplay($event)" style="color:Black;" class="list-group-item">
                     <strong>List of Parking spot</strong>
                     <span style="float:right;" class="glyphicon glyphicon-menu-down"></span>
                 </li>
 
             </ul>
-            <a href="#">
-                <span class="glyphicon glyphicon-menu-down"></span>
-            </a>
 
-            <ul ng-show="display" class="list-group list-div-style">
-                <li ng-repeat="parkingLot in parkingLotMain.carparks" ng-if="shouldAdd(parkingLot.lat,parkingLot.lng,distance)" class="list-group-item hover-color"  ng-click = "generateMarker($event)">
-                   {{parkingLot.address}}
+            <ul ng-show="readyToDispaly" class="list-group list-div-style">
+                <li ng-repeat="parkingLot in parkingLotMain.carparks" data-title="{{parkingLot.address}}" ng-if="shouldAdd(parkingLot.lat,parkingLot.lng,distance)" class="list-group-item hover-color"  ng-click = "generateMarker($event)">
+                   <strong>{{parkingLot.address}}</strong>
+                    <span style="float:right; background-color:#929292; padding:5px 7px 5px 7px;">{{parkingDistance}} KM</span><br>
+                    <span>Rate = {{parkingLot.rate}}</span>
                 </li>
             </ul>
         </div>

@@ -96,24 +96,38 @@ function scrollToAnchor(aid){
 var app = angular.module("myApp",[]);
 app.controller('homeController',["$scope", "$http",function($scope,$http) {
     $scope.readyToDispaly = false;
-    $scope.toggleDisplay = function() {
-        $scope.readyToDispaly = true;
+    $scope.toggleDisplay = function(event) {
+        if(event.currentTarget.children[1].className == "glyphicon glyphicon-menu-down") {
+            event.currentTarget.children[1].className = "glyphicon glyphicon-menu-up";
+            $scope.readyToDispaly = true;
+        }
+        else {
+            event.currentTarget.children[1].className = "glyphicon glyphicon-menu-down";
+
+            $scope.readyToDispaly = false;
+        }
     };
 
     $http.get("json/parkingSpot.JSON").then(function (response) {
         $scope.parkingLotMain = response.data;
 
     });
+    $scope.parkingDistance = 0;
     //added method showList to Sscope
 
     $scope.shouldAdd = function(lat,lng,distance){
-        if(calcDistance(currentPosition,new google.maps.LatLng(lat,lng)) <= distance)
+        if(($scope.parkingDistance = calcDistance(currentPosition,new google.maps.LatLng(lat,lng))) <= distance)
             return true;
         else
             return false;
     };
+
+    $scope.getDistance = function(lat) {
+
+    };
+
     $scope.generateMarker = function(event)  {
-        var parkigLotName = event.currentTarget.innerText;
+        var parkigLotName = event.currentTarget.dataset.title;
         for (var i = 0; i < $scope.parkingLotMain.carparks.length; i++) {
             if($scope.parkingLotMain.carparks[i].address === parkigLotName) {
                 var loc = new google.maps.LatLng($scope.parkingLotMain.carparks[i].lat,$scope.parkingLotMain.carparks[i].lng);
