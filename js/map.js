@@ -85,6 +85,7 @@ function initAutocomplete() {
 function calcDistance(p1, p2){
     return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
 }
+//
 
 function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
@@ -103,7 +104,14 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
         $scope.parkingLotMain = response.data;
 
     });
+    //added method showList to Sscope
 
+    $scope.shouldAdd = function(lat,lng,distance){
+        if(calcDistance(currentPosition,new google.maps.LatLng(lat,lng)) <= distance)
+            return true;
+        else
+            return false;
+    };
     $scope.generateMarker = function(event)  {
         var parkigLotName = event.currentTarget.innerText;
         for (var i = 0; i < $scope.parkingLotMain.carparks.length; i++) {
@@ -125,11 +133,10 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
         }
     };
 }]);
-
+//--------------added *********************************
 function displayAddress(marker) {
     data = marker.getTitle();
     if(data.includes('Your Current Location')) {
-
     }
     else if(currentPosition) {
         distance = calcDistance(marker.getPosition(), currentPosition);

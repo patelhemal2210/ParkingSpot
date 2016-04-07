@@ -13,7 +13,8 @@
     <script src="js/map.js"></script>
 </head>
 <body class="bg-primary">
-    <div class="content-heading">
+<div ng-controller="homeController">
+<div class="content-heading">
        <!-- <img style="float:left;margin-right:150px;" src="images/logo.png" class="img-responsive" alt="LOGO"><br>-->
         <img style="float:left;margin-left:150px;" src="images/title3.png" class="img-responsive" alt="LOGO"><br>
     </div>
@@ -31,8 +32,8 @@
         <div class="control-group row-fluid form-inline">
             <h4 style="margin-left:25px;"><strong>Find Parking Spot</strong></h4>
             <div class="controls">
-                <input id="pac-input" class="Searchcontrols" type="text" placeholder="Search Box"><br/>
-                <input id="kmInput" class="Searchcontrols" type="number" placeholder="Enter distance in KM" min="1" max="100" />
+                <input id="pac-input" class="Searchcontrols" ng-model="source"type="text" placeholder="Search Box"><br/>
+                <input id="kmInput" class="Searchcontrols" type="number" ng-model="distance" placeholder="Enter distance in KM" min="1" max="100" />
             </div>
 
 
@@ -41,7 +42,7 @@
     </div>
     <a name="MapAncher"></a>
     <div class="form-horizontal">
-        <div class="list-div-style-div" ng-controller="homeController">
+        <div class="list-div-style-div">
             <ul class="list-group list-div-style-title">
                 <li ng-click="display = !display" style="color:Black;" class="list-group-item">
                     <strong>List of Parking spot</strong>
@@ -54,7 +55,7 @@
             </a>
 
             <ul ng-show="display" class="list-group list-div-style">
-                <li ng-repeat="parkingLot in parkingLotMain.carparks" class="list-group-item hover-color" ng-click = "generateMarker($event)">
+                <li ng-repeat="parkingLot in parkingLotMain.carparks" ng-if="shouldAdd(parkingLot.lat,parkingLot.lng,distance)" class="list-group-item hover-color"  ng-click = "generateMarker($event)">
                    {{parkingLot.address}}
                 </li>
             </ul>
@@ -64,6 +65,6 @@
     </div>
 
 
-
+</div>
 </body>
 </html>
