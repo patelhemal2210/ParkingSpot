@@ -1,0 +1,1292 @@
+[
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"2425 JANE ST"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"DUNDAS SQ"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"46 SPADINA AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"39 LAKEVIEW AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"46 SPADINA AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"21 CAMBRIDGE AVE"
+  },
+  {
+    "code":9,
+    "description":"STOP-SIGNED HWY-PROHIBIT TM/DY",
+    "fine":60,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":9,
+    "description":"STOP-SIGNED HWY-PROHIBIT TM/DY",
+    "fine":60,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"40 HIGH PARK AVE"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"46 SPADINA AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"30 KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"27 CAMBRIDGE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"145 STRATHMORE BLVD"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"49 CAMBRIDGE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"2 CAITHNESS AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"19 MACEY AVE"
+  },
+  {
+    "code":4,
+    "description":"PARK ON MUNICIPAL PROPERTY",
+    "fine":30,
+    "location":"10 YUKON PLACE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"40 HIGH PARK AVE"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"60 KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"6 CAITHNESS AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"40 HIGH PARK AVE"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"380 WELLINGTON ST W"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"60 KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"49 CAMBRIDGE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"87 STRATHMORE BLVD"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ALBION AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"14 LONDON GREEN CT"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"62 KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"85 STRATHMORE BLVD"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"178 DUPONT ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"70 HIGH PARK AVE"
+  },
+  {
+    "code":57,
+    "description":"STOP-WITHIN (INTERSCTN/PED X)",
+    "fine":60,
+    "location":"111 CHESTNUT ST"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"5351 YONGE ST"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"80 LYNN WILLIAMS ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"63 CAMBRIDGE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"85 STRATHMORE BLVD"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"14 LONDON GREE CT"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"80 LYNN WILLIAMS ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"98 KINGSWOOD RD"
+  },
+  {
+    "code":9,
+    "description":"STOP-SIGNED HWY-PROHIBIT TM/DY",
+    "fine":60,
+    "location":"122 PATTERSON AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"104 KINGSWOOD RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"149 CAMBRIDGE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"130 LAMB AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"132 LAMB AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"31 EATON AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"14 LONDON GREEN CT"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"3 DUPLEX AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"CARLAW AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"983 KINGSTON RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"143 CAMBRIDGE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"147 LAMB AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"120 HIGH PARK AVE"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"8 DUPLEX AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"CARLAW AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"100 WESTERN BATTERY RD"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"100 WESTERN BATTERY RD"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"171 PACIFIC AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"149 LAMB AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"100 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"20 WOODYCREST AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"100 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"7 WOODYCREST AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"45 CATARAQUI CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"150 HIGH PARK AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"70 CENTRE AVE"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"1 DUPLEX AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"125 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"303 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"24 PRETORIA AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"157 HIGH PARK AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"125 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"309 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"17 PRINCE ARTHUR AVE"
+  },
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"59 CATARAQUI CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"61 CAVELL AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"125 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"281 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"15 PLAYTER CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"21 PRINCE ARTHUR AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"214 GILLARD AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"125 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"15 PLAYTER CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"33 PRINCE ARTHUR AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"40 FIRVALLEY CRT"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"175 GILLARD AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"153 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"98 CAVELL AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"125 WESTERN BATTERY RD"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"125 WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"201 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"33 PRINCE ARTHUR AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"182 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"71 GOUGH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"11 PRINCE ARTHUR AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"164 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"MILL ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"179 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"36 ELLERBECK ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"11 PRINCE ARTHUR AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"164 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"MILL ST"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"33 STRATHCONA AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"51 TICHESTER RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"145 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"147 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"71 GOUGH AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"MILL ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"50 ELLERBECK ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"31 TICHESTER RD"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"16 YONGE ST"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"57 GOULDEN CRES"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"200 PARKMOUNT RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"125 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"58 ELLERBECK ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"81 GOUGH AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"16 YONGE ST"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"16 YONGE ST"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"MILL ST"
+  },
+  {
+    "code":4,
+    "description":"PARK ON MUNICIPAL PROPERTY",
+    "fine":30,
+    "location":"265 MANITOBA DRIVE"
+  },
+  {
+    "code":4,
+    "description":"PARK ON MUNICIPAL PROPERTY",
+    "fine":30,
+    "location":"10 YUKON PLACE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"182 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"140 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"58 ELLERBECK ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"85 GOUGH AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"MILL ST"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"99 WILKES CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"191 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"81 WROXETER AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":336,
+    "description":"PARK-FAIL TO DISPLAY PERMIT",
+    "fine":30,
+    "location":"126 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"26 TICHESTER RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"97 GOUGH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"MILL ST"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"99 WILKES CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"62 ELLERBECK ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"MILL ST"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"88 GRANGEWAY AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"28 WROXETER AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"122 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"18 TICHESTER RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"113 GOUGH AVE"
+  },
+  {
+    "code":8,
+    "description":"STAND VEH.-PROHIBIT TIME/DAY",
+    "fine":60,
+    "location":"12 WILKES CRES"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"244 HIGH PARK AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"OXLEY ST"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"27 WROXETER AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"120 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"113 GOUGH AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"16 YONGE ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"241 HIGH PARK AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"605 FINCH AVE W"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"112 KENILWORTH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"121 GOUGH AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"16 WROXETER AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"1953 QUEEN ST E"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"1360 DUNDAS ST W"
+  },
+  {
+    "code":4,
+    "description":"PARK ON MUNICIPAL PROPERTY",
+    "fine":30,
+    "location":"170 PRINCES BLVD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"248 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"104 KIPPENDAVIE AVE"
+  },
+  {
+    "code":337,
+    "description":"PARK - ON BOULEVARD",
+    "fine":50,
+    "location":"CHARLOTTE ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"4 FRIZZELL AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"248 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"80 KIPPENDAVIE AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"907 LOGAN AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"909 LOGAN AVE"
+  },
+  {
+    "code":337,
+    "description":"PARK - ON BOULEVARD",
+    "fine":50,
+    "location":"CHARLOTTE ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"248 HIGH PARK AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"WESTERN BATTERY RD"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"66 KIPPENDAVIE AVE"
+  },
+  {
+    "code":337,
+    "description":"PARK - ON BOULEVARD",
+    "fine":50,
+    "location":"CHARLOTTE ST"
+  },
+  {
+    "code":337,
+    "description":"PARK - ON BOULEVARD",
+    "fine":50,
+    "location":"CHARLOTTE ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"23 FRIZZELL AVE"
+  },
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":207,
+    "description":"PARK FAIL TO DEP. FEE MACHINE",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":207,
+    "description":"PARK FAIL TO DEP. FEE MACHINE",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":207,
+    "description":"PARK FAIL TO DEP. FEE MACHINE",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":207,
+    "description":"PARK FAIL TO DEP. FEE MACHINE",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":207,
+    "description":"PARK FAIL TO DEP. FEE MACHINE",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":207,
+    "description":"PARK FAIL TO DEP. FEE MACHINE",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":210,
+    "description":"PARK FAIL TO DISPLAY RECEIPT",
+    "fine":30,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":406,
+    "description":"PARK-VEH. W/O VALID ONT PLATE",
+    "fine":40,
+    "location":"11 CENTRE AVE"
+  }
+]

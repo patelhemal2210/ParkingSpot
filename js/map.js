@@ -37,7 +37,7 @@ function initAutocomplete() {
 
         // Clear out the old markers.
         markers.forEach(function(marker) {
-            marker.setMap(null);
+            marker.marker.setMap(null);
         });
         markers = [];
 
@@ -53,17 +53,24 @@ function initAutocomplete() {
              };*/
 
             // Create a marker for each place.
-            var addr = "Your Current Location : ";
+            var addr = "Your Current Location ::: ";
             addr += place.name;
-            markers.push(new google.maps.Marker({
+            markers.push({marker : new google.maps.Marker({
                 map: map,
                 //icon: icon,
                 title: addr,
                 position: place.geometry.location
-            }));
+            }), parkingSpot : ""});
 
-            google.maps.event.addListener(markers[markers.length-1],'click',function() {
-                displayAddress(this);
+            google.maps.event.addListener(markers[markers.length-1].marker,'click',function() {
+                var parkingSpot;
+                for(var i = 0; i < markers.length; i++) {
+                    if(markers[i].marker == this) {
+                        parkingSpot = markers[i].parkingSpot;
+                        break;
+                    }
+                }
+                displayAddress(this, parkingSpot);
             });
 
             var p1 = new google.maps.LatLng(43.728366916627465, -79.60748551103364);
@@ -79,6 +86,17 @@ function initAutocomplete() {
         map.fitBounds(bounds);
         scrollToAnchor('MapAncher');
     });
+
+
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(new ParkingTicketCheckBox());
+}
+
+function ParkingTicketCheckBox() {
+    var div = $('<div class="checkbox">')
+        .append($('<label><input type="checkbox" value="" style="color:black;">Ticket Spot</label>'))
+        .append($('</div>'));
+
+    return div.get(0);
 }
 
 //calculates distance between two points in km's
@@ -112,6 +130,18 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
         $scope.parkingLotMain = response.data;
 
     });
+
+    $http.get("json/parkingTicket.JSON").then(function (response) {
+        $scope.parkingTicket = response.data;
+    });
+
+
+    /*
+
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(new SearchBox());
+*/
+
+
     $scope.parkingDistance = 0;
     //added method showList to Sscope
 
@@ -131,31 +161,62 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
         for (var i = 0; i < $scope.parkingLotMain.carparks.length; i++) {
             if($scope.parkingLotMain.carparks[i].address === parkigLotName) {
                 var loc = new google.maps.LatLng($scope.parkingLotMain.carparks[i].lat,$scope.parkingLotMain.carparks[i].lng);
-                markers.push(new google.maps.Marker({
+                var markr = new google.maps.Marker({
                     map: map,
                     //icon: icon,
                     title: parkigLotName,
                     position: loc
-                }));
-                map.setCenter(loc);
-                google.maps.event.addListener(markers[markers.length-1],'click',function() {
-                    displayAddress(this);
                 });
+                markers.push({marker : markr, parkingSpot: $scope.parkingLotMain.carparks[i]});
+                map.setCenter(loc);
+                google.maps.event.addListener(markers[markers.length-1].marker,'click',function() {
+                    var parkingSpot;
+                    for(var i = 0; i < markers.length; i++) {
+                        if(markers[i].marker == this) {
+                            parkingSpot = markers[i].parkingSpot;
+                            break;
+                        }
+                    }
+                    displayAddress(this, parkingSpot);
+                });
+                displayAddress(markr, $scope.parkingLotMain.carparks[i]);
+                scrollToAnchor('MapAncher');
                 break;
-                alert("marker added");
+                //alert("marker added");
             }
         }
     };
 }]);
 //--------------added *********************************
-function displayAddress(marker) {
+function displayAddress(marker, parkingInfo) {
     data = marker.getTitle();
     if(data.includes('Your Current Location')) {
+        var list = marker.getTitle().split(":::");
+        data = "<strong>Your Current Location : </strong>" + list[1];
     }
     else if(currentPosition) {
-        distance = calcDistance(marker.getPosition(), currentPosition);
-        data += "<br> distance is : ";
-        data += distance;
+        //distance = calcDistance(marker.getPosition(), currentPosition);
+        //data += "<br> distance is : ";
+        //data += distance;
+        data = "";
+        data += "<strong>" + parkingInfo.address + "</strong>" + "<br>";
+        data += "<strong> Rate : </strong>" + parkingInfo.rate + "<br>";
+        data += "<strong> Type : </strong>" + parkingInfo.carpark_type + "<br>";
+        data += "<strong> Capacity : </strong>" + parkingInfo.capacity + " Spaces<br>";
+        data += "<strong> Height Restriction(Approximate) : </strong>";
+        data += (parkingInfo.max_height == 0) ? "No height restriction" : (parkingInfo.max_height  + " meters");
+        data += "<br>";
+        data += "<strong> Payment Options : </strong>";
+        for(var i = 0 ; i < parkingInfo.payment_options.length; i++) {
+            data += parkingInfo.payment_options[i]+ ",";
+        }
+
+        data += "<br>";
+        data += "<strong> Accepted Forms of Payment : </strong>";
+        for(var i = 0 ; i < parkingInfo.payment_methods.length; i++) {
+            data += parkingInfo.payment_methods[i]+ ",";
+        }
+        data += "<br>";
     }
 
     infowindow.setContent(data);
