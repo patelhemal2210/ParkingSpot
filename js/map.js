@@ -3,6 +3,7 @@
  */
 
 var markers = [];
+var markersTickets = [];
 var map;
 var infowindow;
 var currentPosition = 0;
@@ -90,14 +91,22 @@ function initAutocomplete() {
 
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(new ParkingTicketCheckBox());
 }
+//var checkBox = document.getElementById("check");
+//checkBox.onclick = function() {
+//    if(checkBox.checked){
+//        alert("checked");
+//    }
+
 
 function ParkingTicketCheckBox() {
-    var div = $('<div class="checkbox">')
-        .append($('<label><input type="checkbox" value="" style="color:black;">Ticket Spot</label>'))
+    var div = $('<div id="checkbox" >')
+        .append($('<label><input type="checkbox"  value="" style="color:black;">Ticket Spot</label>'))
         .append($('</div>'));
 
     return div.get(0);
 }
+//assigning a function to onclick of checkBox
+
 
 //calculates distance between two points in km's
 function calcDistance(p1, p2){
@@ -114,6 +123,7 @@ function scrollToAnchor(aid){
 var app = angular.module("myApp",[]);
 app.controller('homeController',["$scope", "$http",function($scope,$http) {
     $scope.readyToDispaly = false;
+
     $scope.toggleDisplay = function(event) {
         if(event.currentTarget.children[1].className == "glyphicon glyphicon-menu-down") {
             event.currentTarget.children[1].className = "glyphicon glyphicon-menu-up";
@@ -131,9 +141,24 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
 
     });
 
-    $http.get("json/parkingTicket.JSON").then(function (response) {
+    $http.get("json/tetsJSON.json").then(function (response) {
         $scope.parkingTicket = response.data;
     });
+    $scope.showTicketSpots = function(){
+        console.log($("#check").is(':checked'));
+        if($("#check").is(':checked')){
+        for (var i = 0; i < $scope.parkingTicket.length; i++) {
+               markersTickets[i] = codeAddress($scope.parkingTicket[i].location + ",TORONTO,ON");
+           }
+        }
+       else {
+            for (var j = 0; j < markersTickets.length; j++) {
+                alert("inside second for");
+                markersTickets[j].setMap(null);
+            }
+        }
+
+       }
 
 
     /*
@@ -226,7 +251,26 @@ function displayAddress(marker, parkingInfo) {
 function generateMarker(data) {
     alert(data);
 }
+//FUNCTION TO GENERATE MARKERS FOR PARKING TICKET SPOTS+++++++
+function codeAddress(address) {
+    //In this case it gets the address from JSON
+    var marker;
+    geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            alert(results[0].geometry.location);
+            marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location,
+               animation: google.maps.Animation.BOUNCE
+            });
 
+        } else {
+            alert("Geocode was not successful for the following reason: " + status);
+        }
+    });
+    return marker;
+}
 /*
 
 var app = angular.module("myApp",[]);

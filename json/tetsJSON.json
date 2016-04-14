@@ -1,0 +1,80 @@
+[
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":15,
+    "description":"PARK-WITHIN 3M OF FIRE HYDRANT",
+    "fine":100,
+    "location":"11 CENTRE AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"2425 JANE ST"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"DUNDAS SQ"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"46 SPADINA AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"39 LAKEVIEW AVE"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":5,
+    "description":"PARK-SIGNED HWY-PROHIBIT DY/TM",
+    "fine":40,
+    "location":"ARMOURY ST"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"FENWICK AVE"
+  },
+  {
+    "code":3,
+    "description":"PARK ON PRIVATE PROPERTY",
+    "fine":30,
+    "location":"46 SPADINA AVE"
+  },
+  {
+    "code":29,
+    "description":"PARK PROHIBITED TIME NO PERMIT",
+    "fine":30,
+    "location":"21 CAMBRIDGE AVE"
+  },
+  {
+    "code":9,
+    "description":"STOP-SIGNED HWY-PROHIBIT TM/DY",
+    "fine":60,
+    "location":"ARMOURY ST"
+  }
+  ]
