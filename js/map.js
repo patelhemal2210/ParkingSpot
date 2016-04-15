@@ -6,6 +6,7 @@ var markers = [];
 var markersTickets = [];
 var map;
 var infowindow;
+var parkingTicketArrayGlobal;
 var currentPosition = 0;
 function initAutocomplete() {
     map = new google.maps.Map(document.getElementById('Map'), {
@@ -91,12 +92,6 @@ function initAutocomplete() {
 
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(new ParkingTicketCheckBox());
 }
-//var checkBox = document.getElementById("check");
-//checkBox.onclick = function() {
-//    if(checkBox.checked){
-//        alert("checked");
-//    }
-
 
 function ParkingTicketCheckBox() {
     var div = $('<div id="checkbox" >')
@@ -105,9 +100,6 @@ function ParkingTicketCheckBox() {
 
     return div.get(0);
 }
-//assigning a function to onclick of checkBox
-
-
 //calculates distance between two points in km's
 function calcDistance(p1, p2){
     return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
@@ -139,37 +131,29 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
     $http.get("json/parkingSpot.JSON").then(function (response) {
         $scope.parkingLotMain = response.data;
 
+
     });
 
     $http.get("json/tetsJSON.json").then(function (response) {
         $scope.parkingTicket = response.data;
+        parkingTicketArrayGlobal = $scope.parkingTicket;
     });
     $scope.showTicketSpots = function(){
         console.log($("#check").is(':checked'));
         if($("#check").is(':checked')){
         for (var i = 0; i < $scope.parkingTicket.length; i++) {
-               markersTickets[i] = codeAddress($scope.parkingTicket[i].location + ",TORONTO,ON");
+              codeAddress($scope.parkingTicket[i]);
            }
         }
        else {
             for (var j = 0; j < markersTickets.length; j++) {
-                alert("inside second for");
                 markersTickets[j].setMap(null);
             }
+             markersTickets = [];
         }
-
        }
-
-
-    /*
-
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(new SearchBox());
-*/
-
-
     $scope.parkingDistance = 0;
-    //added method showList to Sscope
-
+    //method to change list as per entered distance
     $scope.shouldAdd = function(lat,lng,distance){
         if(($scope.parkingDistance = calcDistance(currentPosition,new google.maps.LatLng(lat,lng))) <= distance)
             return true;
@@ -220,9 +204,6 @@ function displayAddress(marker, parkingInfo) {
         data = "<strong>Your Current Location : </strong>" + list[1];
     }
     else if(currentPosition) {
-        //distance = calcDistance(marker.getPosition(), currentPosition);
-        //data += "<br> distance is : ";
-        //data += distance;
         data = "";
         data += "<strong>" + parkingInfo.address + "</strong>" + "<br>";
         data += "<strong> Rate : </strong>" + parkingInfo.rate + "<br>";
@@ -252,27 +233,61 @@ function generateMarker(data) {
     alert(data);
 }
 //FUNCTION TO GENERATE MARKERS FOR PARKING TICKET SPOTS+++++++
-function codeAddress(address) {
+function codeAddress(parkingSpotObject) {
     //In this case it gets the address from JSON
     var marker;
     geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address': address}, function(results, status) {
+    geocoder.geocode( { 'address': parkingSpotObject.location+",TORONTO,ON"}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            alert(results[0].geometry.location);
-            marker = new google.maps.Marker({
+             marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
-               animation: google.maps.Animation.BOUNCE
+                icon: "images/TicketSpot_Red.png",
+                title:parkingSpotObject.location
             });
-
+            var infowindow = new google.maps.InfoWindow({
+                content: generateTicketWindow(parkingSpotObject)
+            });
+            marker.addListener('mouseover', function() {
+                infowindow.open(map, marker);
+            });
+            marker.addListener('mouseout', function() {
+                infowindow.close();
+            });
+            markersTickets.push(marker);
         } else {
             alert("Geocode was not successful for the following reason: " + status);
         }
+
     });
-    return marker;
+}
+//this function is generating ticket information window
+function generateTicketWindow(parkingTicketObject){
+    count = 0;
+    check=0;
+    var data = '<strong>Location : </strong>'+parkingTicketObject.location+'<br>';
+    for(j=0;j<parkingTicketArrayGlobal.length;j++){
+        if(parkingTicketArrayGlobal[j].location == parkingTicketObject.location){
+            if(parkingTicketArrayGlobal[j].code == parkingTicketObject.code){
+                check=j;
+                count++;
+            }else{
+               data+='<strong>Description : </strong>'+parkingTicketArrayGlobal[j].description+'&nbsp;'+
+                   '<strong>Fine Amount : </strong>'+parkingTicketArrayGlobal[j].fine+'<br>';
+            }
+        }
+    }
+    if(count == 1) {
+        data += '<strong>Description : </strong>' + parkingTicketArrayGlobal[check].description + '&nbsp;' +
+            '<strong>Fine Amount : </strong>' + parkingTicketArrayGlobal[check].fine;
+    }
+    if(count > 1) {
+        data += '<strong>Description : </strong>' + parkingTicketArrayGlobal[check].description + '&nbsp;' +
+            '<strong>Fine Amount : </strong>' + parkingTicketArrayGlobal[check].fine + '<br><strong>Fined </strong>' + count + ' Times for this mistake';
+    }
+    return data;
 }
 /*
-
 var app = angular.module("myApp",[]);
 app.controller('homeController',['$scope', function($scope) {
     var xhr = new XMLHttpRequest();
