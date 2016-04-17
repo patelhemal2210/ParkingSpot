@@ -18,7 +18,7 @@
        <!-- <img style="float:left;margin-right:150px;" src="images/logo.png" class="img-responsive" alt="LOGO"><br>-->
         <img style="float:left;margin-left:150px;" src="images/Header.png" class="img-responsive" alt="LOGO"><br>
     </div>
-    <nav style="clear:both" class="navbar navbar-inverse">
+    <nav style="clear:both" class="navbar navbar-default">
         <div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#/">Home</a></li>
@@ -28,10 +28,13 @@
     <div class="form-horizontal">
         <div class="control-group row-fluid form-inline">
             <h4 style="margin-left:25px;"><strong>Find Parking Spot</strong></h4>
-            <div class="controls">
+            <div class="checkbox checkbox-success">
                 <input id="pac-input" class="Searchcontrols" ng-model="source"type="text" placeholder="Search Box"><br/>
                 <input id="kmInput" class="Searchcontrols" type="number" ng-model="distance" placeholder="Enter distance in KM" min="1" max="100" /><br><br/>
-                <input id="check"   type="checkbox" ng-click="showTicketSpots()"/>Get Parking areas<br/>
+                <div class="checkbox checkbox-success">
+                    <input id="check" type="checkbox" ng-click="showTicketSpots()" class="checkbox checkbox-success"/>Show Parking Ticket Area<br/>
+                </div>
+
 
             </div>
 

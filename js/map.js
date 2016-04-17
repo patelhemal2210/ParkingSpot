@@ -94,17 +94,6 @@ function initAutocomplete() {
         map.fitBounds(bounds);
         scrollToAnchor('MapAncher');
     });
-
-
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(new ParkingTicketCheckBox());
-}
-
-function ParkingTicketCheckBox() {
-    var div = $('<div id="checkbox" >')
-        .append($('<label><input type="checkbox"  value="" style="color:black;">Ticket Spot</label>'))
-        .append($('</div>'));
-
-    return div.get(0);
 }
 
 //calculates distance between two points in km's
