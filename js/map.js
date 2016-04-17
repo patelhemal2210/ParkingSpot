@@ -62,7 +62,7 @@ function initAutocomplete() {
             addr += place.name;
             markers.push({marker : new google.maps.Marker({
                 map: map,
-                //icon: icon,
+                icon: "images/CurrentLocation_Blue.png",
                 title: addr,
                 position: place.geometry.location
             }), parkingSpot : ""});
@@ -192,7 +192,7 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
                 var loc = new google.maps.LatLng($scope.parkingLotMain.carparks[i].lat,$scope.parkingLotMain.carparks[i].lng);
                 var markr = new google.maps.Marker({
                     map: map,
-                    //icon: icon,
+                    icon: "images/ParkingSpot_Green.png",
                     title: parkigLotName,
                     position: loc
                 });
@@ -267,10 +267,11 @@ function codeAddress() {
                     icon: "images/TicketSpot_Red.png",
                     title: parkingTicketArrayGlobal[parkingTicketIntervalCount].location
                 });
-                var infowindow = new google.maps.InfoWindow({
-                    content: generateTicketWindow(parkingTicketArrayGlobal[parkingTicketIntervalCount])
-                });
+                //var infowindow = new google.maps.InfoWindow({
+                //    content: generateTicketWindow(parkingTicketArrayGlobal[parkingTicketIntervalCount])
+                //});
                 marker.addListener('mouseover', function () {
+                    infowindow.setContent(generateTicketWindow(parkingTicketArrayGlobal[parkingTicketIntervalCount]));
                     infowindow.open(map, marker);
                 });
                 marker.addListener('mouseout', function () {
