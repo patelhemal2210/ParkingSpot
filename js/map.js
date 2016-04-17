@@ -8,6 +8,9 @@ var map;
 var infowindow;
 var parkingTicketArrayGlobal;
 var currentPosition = 0;
+var parkingTicketIntervalCount = 0;
+var parkingTicketIntervalId;
+var showTicket = false;
 function initAutocomplete() {
     map = new google.maps.Map(document.getElementById('Map'), {
         center: {lat: 43.728366916627465, lng: -79.60748551103364},
@@ -100,17 +103,16 @@ function ParkingTicketCheckBox() {
 
     return div.get(0);
 }
+
 //calculates distance between two points in km's
 function calcDistance(p1, p2){
     return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
 }
-//
 
 function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 }
-
 
 var app = angular.module("myApp",[]);
 app.controller('homeController',["$scope", "$http",function($scope,$http) {
@@ -134,22 +136,40 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
 
     });
 
-    $http.get("json/tetsJSON.json").then(function (response) {
+    $http.get("json/parkingTicket.JSON").then(function (response) {
         $scope.parkingTicket = response.data;
         parkingTicketArrayGlobal = $scope.parkingTicket;
+        parkingTicketIntervalId = setInterval(function () {
+                        codeAddress();
+                    }, 300);
     });
     $scope.showTicketSpots = function(){
         console.log($("#check").is(':checked'));
         if($("#check").is(':checked')){
-        for (var i = 0; i < $scope.parkingTicket.length; i++) {
-              codeAddress($scope.parkingTicket[i]);
-           }
+            showTicket = true;
+        //for (var i = 0; i < $scope.parkingTicket.length; i++) {
+              //setTimeout(function() {codeAddress($scope.parkingTicket[i]);}, 2000);
+        //    if(markersTickets.length < parkingTicketArrayGlobal.length)
+        //    {
+        //        parkingTicketIntervalCount = markersTickets.length;
+        //        parkingTicketIntervalId = setInterval(function () {
+        //            codeAddress();
+        //        }, 300);
+        //    }
+        //    else
+        //    {
+                for (var j = 0; j < markersTickets.length; j++) {
+                    markersTickets[j].setMap(map);
+                }
+        //    }
+          // }
         }
        else {
+            showTicket = false;
             for (var j = 0; j < markersTickets.length; j++) {
                 markersTickets[j].setMap(null);
             }
-             markersTickets = [];
+//             markersTickets = [];
         }
        }
     $scope.parkingDistance = 0;
@@ -233,33 +253,42 @@ function generateMarker(data) {
     alert(data);
 }
 //FUNCTION TO GENERATE MARKERS FOR PARKING TICKET SPOTS+++++++
-function codeAddress(parkingSpotObject) {
+function codeAddress() {
     //In this case it gets the address from JSON
-    var marker;
-    geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address': parkingSpotObject.location+",TORONTO,ON"}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-             marker = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location,
-                icon: "images/TicketSpot_Red.png",
-                title:parkingSpotObject.location
-            });
-            var infowindow = new google.maps.InfoWindow({
-                content: generateTicketWindow(parkingSpotObject)
-            });
-            marker.addListener('mouseover', function() {
-                infowindow.open(map, marker);
-            });
-            marker.addListener('mouseout', function() {
-                infowindow.close();
-            });
-            markersTickets.push(marker);
-        } else {
-            alert("Geocode was not successful for the following reason: " + status);
-        }
+    if(parkingTicketIntervalCount < parkingTicketArrayGlobal.length) {
+        var marker;
+        geocoder = new google.maps.Geocoder();
+        geocoder.geocode({'address': parkingTicketArrayGlobal[parkingTicketIntervalCount].location + ",TORONTO,ON"}, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                marker = new google.maps.Marker({
+                    //map: map,
+                    map : (showTicket == true) ? map : null,
+                    position: results[0].geometry.location,
+                    icon: "images/TicketSpot_Red.png",
+                    title: parkingTicketArrayGlobal[parkingTicketIntervalCount].location
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: generateTicketWindow(parkingTicketArrayGlobal[parkingTicketIntervalCount])
+                });
+                marker.addListener('mouseover', function () {
+                    infowindow.open(map, marker);
+                });
+                marker.addListener('mouseout', function () {
+                    infowindow.close();
+                });
+                markersTickets.push(marker);
+                parkingTicketIntervalCount++;
+            } else {
+                //alert("Geocode was not successful for the following reason: " + status);
+            }
 
-    });
+        });
+
+    }
+    else
+    {
+        clearInterval(parkingTicketIntervalId);
+    }
 }
 //this function is generating ticket information window
 function generateTicketWindow(parkingTicketObject){
