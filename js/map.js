@@ -11,11 +11,21 @@ var currentPosition = 0;
 var parkingTicketIntervalCount = 0;
 var parkingTicketIntervalId;
 var showTicket = false;
+var directionsService;
+var directionsDisplay;
+
 function initAutocomplete() {
     map = new google.maps.Map(document.getElementById('Map'), {
         center: {lat: 43.728366916627465, lng: -79.60748551103364},
         zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    directionsService = new google.maps.DirectionsService;
+    directionsDisplay = new google.maps.DirectionsRenderer({
+        map: map,
+        suppressMarkers: true,
+        draggable: true
     });
 
     infowindow = new google.maps.InfoWindow({
@@ -49,13 +59,6 @@ function initAutocomplete() {
         // For each place, get the icon, name and location.
         var bounds = new google.maps.LatLngBounds();
         places.forEach(function(place) {
-            /* var icon = {
-             url: place.icon,
-             size: new google.maps.Size(71, 71),
-             origin: new google.maps.Point(0, 0),
-             anchor: new google.maps.Point(17, 34),
-             scaledSize: new google.maps.Size(25, 25)
-             };*/
 
             // Create a marker for each place.
             var addr = "Your Current Location ::: ";
@@ -147,22 +150,10 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
         console.log($("#check").is(':checked'));
         if($("#check").is(':checked')){
             showTicket = true;
-        //for (var i = 0; i < $scope.parkingTicket.length; i++) {
-              //setTimeout(function() {codeAddress($scope.parkingTicket[i]);}, 2000);
-        //    if(markersTickets.length < parkingTicketArrayGlobal.length)
-        //    {
-        //        parkingTicketIntervalCount = markersTickets.length;
-        //        parkingTicketIntervalId = setInterval(function () {
-        //            codeAddress();
-        //        }, 300);
-        //    }
-        //    else
-        //    {
-                for (var j = 0; j < markersTickets.length; j++) {
-                    markersTickets[j].setMap(map);
-                }
-        //    }
-          // }
+            for (var j = 0; j < markersTickets.length; j++) {
+                markersTickets[j].setMap(map);
+            }
+            scrollToAnchor('MapAncher');
         }
        else {
             showTicket = false;
@@ -217,6 +208,28 @@ app.controller('homeController',["$scope", "$http",function($scope,$http) {
     };
 }]);
 //--------------added *********************************
+
+function directionToHere(p1) {
+    displayRoute(p1, currentPosition, directionsService,
+        directionsDisplay);
+}
+
+function displayRoute(origin, destination, service, display) {
+    service.route({
+        origin: origin,
+        destination: destination,
+        travelMode: google.maps.TravelMode.DRIVING,
+        avoidTolls: true
+    }, function(response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            display.setDirections(response);
+        } else {
+            alert('Could not display directions due to: ' + status);
+        }
+    });
+}
+
+
 function displayAddress(marker, parkingInfo) {
     data = marker.getTitle();
     if(data.includes('Your Current Location')) {
@@ -225,6 +238,7 @@ function displayAddress(marker, parkingInfo) {
     }
     else if(currentPosition) {
         data = "";
+        data += "<button id='direction' type='button' class='btn btn-success' onclick='function() {directionToHere(marker.position)}'>Direction</button><br><br>"
         data += "<strong>" + parkingInfo.address + "</strong>" + "<br>";
         data += "<strong> Rate : </strong>" + parkingInfo.rate + "<br>";
         data += "<strong> Type : </strong>" + parkingInfo.carpark_type + "<br>";
@@ -246,6 +260,9 @@ function displayAddress(marker, parkingInfo) {
     }
 
     infowindow.setContent(data);
+    google.maps.event.addListener(infowindow, 'domready', function() {
+        $("#direction").click(function(){ directionToHere(marker.position);});
+    });
     infowindow.open(map, marker);
 }
 
@@ -317,24 +334,3 @@ function generateTicketWindow(parkingTicketObject){
     }
     return data;
 }
-/*
-var app = angular.module("myApp",[]);
-app.controller('homeController',['$scope', function($scope) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'json/parkingSpot.JSON');
-    xhr.onreadystatechange = function () {
-        if(xhr.responseText) {
-            $scope.parkingLotMain = JSON.parse(xhr.responseText);
-        /*    $scope.parkingLotMain.carparks.forEach(function (parlingLot) {
-                markers.push(new google.maps.Marker({
-                    map: map,
-                    //icon: icon,
-                    title: parlingLot.address,
-                }));
-            });*/
-       /* }
-        $scope.readyToDisplay = false;
-    };
-    xhr.send();
-}]);*/
-
